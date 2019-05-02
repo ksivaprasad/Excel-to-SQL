@@ -31,23 +31,3 @@ for sheet in book.sheets():
 		f.write(sql_temp+";\n")
 			
 	
-
-'''
-wb = open_workbook('D:\Workspace\Python\Sample.xlsx')
-values = []
-table = "mytable"
-sql = ""
-for s in wb.sheets():
-    #print 'Sheet:',s.name
-    for row in range(1, s.nrows):
-        col_names = s.row(0)
-        col_value = []
-        sql = "INSERT INTO ".append(table).append(" ")
-        for name, col in zip(col_names, range(s.ncols)):
-            value  = (s.cell(row,col).value)
-            try : value = str(int(value))
-            except : pass
-            col_value.append((name.value, value))
-        values.append(col_value)
-print(values)
-'''
